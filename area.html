@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+    button,#radius{
+        border-radius: 5px;
+        height: 20px;
+    }
+</style>
+<body>
+    <div>
+        <p>Radius:</p>
+        <input id="radius"/>
+        <button id="btn">OK</button>  
+    </div>
+    <hr/>
+    <p id="perimetr"></p>
+        <p id="area"></p>
+    <script>
+        const radius=document.getElementById("radius")
+        const btn=document.getElementById("btn")
+        const area=document.getElementById("area")
+        const perimetr=document.getElementById("perimetr")
+        btn.onclick=function(){
+            const pi=3.14
+            let r=radius.value
+            let P=2*r*pi
+            let S=pi*(r**2)
+            perimetr.innerHTML="Perimetr:" + P
+            area.innerHTML="Area:" + S
+        }
+    </script>
+</body>
+</html>
